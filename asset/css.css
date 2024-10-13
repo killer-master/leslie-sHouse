@@ -1,0 +1,80 @@
+:root{
+    --white: #FEFBF3;
+    --blue: #77cdff;
+}
+*{
+    font-family: "Lora", serif;
+    font-style: italic;
+}
+.car{
+    width: 400px;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+.car .images-box{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+.car .images-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 90%;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+.car::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.car:hover img{
+    filter: grayscale(1) brightness(0.4);
+}
+.car:hover::after{
+    opacity: 1;
+    inset: 20px;
+}
+.content{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+body{
+    background-image: url(images/hero-icon-bg.svg);
+}
+.color{
+    background-color: #FEFBF3;
+}
+
+.blue{
+    background-color: var(--white);
+    width: 83.8rem;
+    height: 34rem;
+    display: flex;
+    gap: 2rem;
+    padding: 3rem;
+}
+.image img{
+    width: 35rem;
+    height: 100%;
+}
+.blue p{
+    display: grid;
+    place-items: center;
+}
+.blue h1{
+    display: grid;
+    place-items: center;
+}
